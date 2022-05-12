@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Botão animado</title>
+	<style type="text/css">
+		body{
+			background-color: #000;
+			width: 300px;
+			height: 300px;
+			padding-top: 20px;
+			margin: 0 auto;
+		}
+		.button{
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+			color: #fff;
+			background: none;
+			border: none;
+			padding: 14px 22px;
+			position: relative;
+		}
+
+		.button::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) translateX(calc(100% + 40px));
+			width: 32px;
+			height: 32px;
+			background: #1a73e8;
+			border-radius: 50px;
+			transition: transform .25s .25s cubic-bezier(0,0,.5,2), width .25s cubic-bezier(0,0,.5,2);
+			z-index: -1;
+		}
+
+		.button:hover::before{
+			width: 100%;
+			transform: translateY(-50%) translateX(-18px);
+			transition: transform .25s cubic-bezier(0,0,.5,2), width .25s .25s cubic-bezier(0,0,.5,2);
+		}
+
+		.button i {
+			margin-left: 14px;
+			transition: transform .25s .4s cubic-bezier(0,0,.5,2);
+		}
+
+		.button:hover i {
+			transform: translateX(2px);
+		}
+		.arrow-right {
+		  border: solid black;
+		  border-width: 0 5px 5px 0;
+		  display: inline-block;
+		  padding: 4px;
+		 transform: rotate(-45deg);
+ 		 -webkit-transform: rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+	<button class="button">
+		acessar<i class="fa-solid arrow-right"></i>
+	</button>
+</body>
+</html>
