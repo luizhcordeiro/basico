@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>neon text</title>
+
+	<script src="https://kit.fontawesome.com/fd9eb50634.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.box {
+			width: 340px;
+			background-color: #ccc;
+			margin: 0 auto;
+			border-radius: 5px;
+		}
+		.icon{
+			color: #fff;
+			width: 30px;
+			margin: 40px;
+			animation: first_color .5s
+			ease-in-out infinite alternate;
+		}
+		.icon:nth-child(2){
+			animation-name: second_color;
+		}
+		.icon:nth-child(3){
+			animation-name: third_color;
+		}
+		@keyframes first_color {
+			0% {
+				text-shadow: 0 0 10px #1877f2,
+				0 0 20px #d6249f, 0 0 30px #179bff
+			}
+			100%{
+				text-shadow: 0 0 5px #1877f2,
+				0 0 10px #d6249f, 0 0 15px #179bff
+			}
+		}
+		@keyframes second_color {
+			0% {
+				text-shadow: 0 0 10px #ff1177,
+				0 0 20px #d6249f, 0 0 30px #285aeb
+			}
+			100%{
+				text-shadow: 0 0 5px #ff1177,
+				0 0 10px #d6249f, 0 0 15px #285aeb
+			}
+		}
+		@keyframes third_color {
+			0% {
+				text-shadow: 0 0 10px #25d366,
+				0 0 20px #d6249f, 0 0 30px #aec0a5
+			}
+			100%{
+				text-shadow: 0 0 5px #25d366,
+				0 0 10px #d6249f, 0 0 15px #aec0a5
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<i class="fa-brands fa-facebook fa-2xl icon"></i>
+		<i class="fa-brands fa-instagram fa-2xl icon"></i>
+		<i class="fa-brands fa-whatsapp fa-2xl icon"></i>
+	</div>
+</body>
+</html>
